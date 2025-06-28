@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  --primary-color: #ffffff;
+  --secondary-color: #cccccc;
+  --background-color: transparent;
+  
+  --font-size-small: 0.75rem;
+  --font-size-medium: 0.875rem;
+  --font-size-large: 1rem;
+  --font-size-xl: 1.25rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent !important;
+}
+
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('https://i.imgur.com/8GQeM5N.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+[data-mode="development"] body {
+  background-color: #333;
+  background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222),
+                    linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+@media (min-width: 768px) {
+  html[data-mode="development"] body {
+    background-color: #333;
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCABkAGQDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAQCAwUGAQf/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAB9UjoHM0zVTJJpB5CSlJx21Qw9aSGHSFXKQiGZ5t2j4j0mGXr02FLt1zAc7LndITOw57ZGpnZc+K6YUdIOE3mZPNSpQNdR2A89i+XJlabCXWjoJ6Lg+YdCMxuJzCGSVE3kxS7QrXKQzrVJc5LtHFMZN0lVynX5y3Jy3KwVvl8VyUDCL5iYtpuNHnNzvV4crsI5tVkQqOTSBZKGz//xAAkEAABBAIBBAMBAQAAAAAAAAABAAIDBAUREgYTIUEUFTEiMv/aAAgBAQABBQLxr/WlwFZhMM3E4+nT6QpXNLIi1xVXFXLCq4qYJOLXwWOFHt3wm8XtDdIRsRiYrT4I2JsPeAHFKKXkGNfjYy9YxuJa3jjMdGIRWpNDUoZ3xAeVlMm6Sv3H+9yrV47FqJ7JpzK/ZfbnZ2H92Q/FsPFePSDfK0HKWm1ydxPz5HZ4xCO9hP8ARVuV1mJjlPNDdnj2sdiHWXlpUrXSVMpD2mTGdxbAp4exJDLCn1nsFmOWPxsDCpIhNG6KSCXtqxT7jz6WNhMlaFgVSoKeIMWPi1GEIGj+qCJsqEtfXpVWPe9V4ZZQ3FUGQQBgjyT8ZFZbRMoI8tLTa7kZ8KKJ80kUI5IeQhGFSxcMKyVXIQpjWuXaYmuREbAWzxTP27Vj5dFPZtlRve70tL0grSuR1Ge2vj9LQ0v/xAAdEQACAgMBAQEAAAAAAAAAAAAAAQIRAxIhMRME/9oACAEDAQE/AY4bPdWfofI19FkWYpbRKVoitpnxs+NFaM0mJcFQ5Jmw4KiUdUY8FOiMdmcTWK6PRP2zzr2x1Gn4OVLhFbPh8IwpUaUYlUejbf4//8QAHBEAAgMBAQEBAAAAAAAAAAAAAAECEQMSITFR/9oACAECAQE/ATHBvpDGvwUdmKJpNE40KNmljS7Y4pkY7FjXRw0S2ZhiYo9FHooe2e2iU9UeLJZNizHpo5qxSr4Ys2rE9j//xAAtEAACAQIEBAMJAQAAAAAAAAAAAQIDERITITEEEBQiFUFRBiAjMDJCUmFxgf/aAAgBAQAGPwLD8xkv7JUWQyM9kXKVIrSoVVVhLSm9x0ciVOa0a5vG6bRnXmo+hZX9TDwlSTmviM6kuSZrtvI3GtRiNr3LJImk7WNaJZrQyqnKNJTJPJ7UZb3iYKXxJkZ0PGK8lNlrqxG1TYuopkaOIlGdmOyjzvsR6bEOo1wEuoUWtxtQpSUmte7ksk2tBSbSQ63D0qdRfw2MNbh60Je9ZmGla3qOzLrUhFQd0OqsMFuWZm45dpCwUMCRorlO+pKEX3Mm1nZFClTlaVRl9jQ6KXHVqUJcQqdbIgql5tSxtDqyipXu/QwRS7iWlxSrfdLQdLiIN052jYp8ZTs7SwtFThq1nhaLSTRh4eChJp3ZGFVPvd7DiOIjjfKPDvNuseKf+GLOqNmBuTfpzWO2LlmJx9SSe6Ix7V6FqkHc+HS+qdGnivKT2OHp0qnw6ccKRFTTViVSe8jp4y8JCrVKihUkuxmFycvhp+RZXsWKc6lP6H5nK//EACUQAQACAgIBBAIDAQAAAAAAAAEAESExQVFhEHGBkSChMLHR4f/aAAgBAQABPyFRmF0Tb+E7JdIhG6Nkt6Cy/dLR8SxB+JvQtj8zGg2/tAqqQ/EpAC6l9oVzBbm/7ltVWQ6QZULuAxwQJbTX0QHBLYc/xfcwCQ2IEbwLuZ+f+w3Fg+J4QUCbANZ4jp1ADLDomaorz8zbXH4FcSqixRqUTT9xlwi9cPMNBFkSK31DOxh3/VkJzjzLrzBpI15iNmfMtRTbuY+VfSj1MyrFaYJkxTM3y9TaQuzuXAjRxFzZtlXaADRiXDUAX3LnFh9oxZfNkAWrx1HJz52x7FMYuWRXJcxMq9xGi63x6VL5gLxKtQpbjxKUWnUoAUBuU14ghdjOCGcw9IMFcepVmCsRaKvwriFhE0PU15jVFI5p+pYBpK31KsZl1Lbr4lYtJ9wKvL2g4Nh9RAH1ZPVBrqAAVMrLEVKlAh8R9ZiUMgYuDkTBg2l1GyFtpnxNcNk9Gu7i9Rqw9VyGNDEDV97gV93CW+3onR/ZdMCKE2hnRgzIRfNXNcysrBFOyBBOw9pZh+iqjnz6ZQpKOtSrA4SYMYswzHsyj0n3FO5WJmWdJ8xiXc5iGpZwdxPNw//aAAwDAQACAAMAAAAQWfnVQQzv6fXALAwgXIEJoOvCM+GCH7Kil7W8P4ICJHmPaLLFCUWUY//EAB0RAQEBAAMBAQEBAAAAAAAAAAEAESExQRBRYXH/2gAIAQMBAT8QbExSNkIRPEh7BGMH7YeDLH2QPI/zNNjQcJGy1Oy3SyGCWAOtlgBxIYgWxgVubFjsnJY4Hsn5LjxnrDpLn2eMnLIY+MQZrklpzbF4QTvk8n2z6f/EAB4RAQEAAwEAAwEBAAAAAAAAAAEAESExQRBRYXGB/9oACAECAQE/EOFkoZnVJ5f3MZCd/hOfM0+EXP7OwMQAIPLJL+Mtq0iNwRVoZAWOJRYUGdwlgWO7JQmZyXeYJ04xAD8ZBLfGEnPJKQGJM9YXVuDCc8Z4ycnhZFp9Y+RkmC4hCB8//8QAJRABAAICAQQCAgMBAAAAAAAAAQARITFBUWFxgZEQoSAwscHw/9oACAEBAAE/EKSZZbKIWlnAtEw9ygkYmR2hOTw3nUsLgXIqK2tmJbXcLyvgdZmL9R5hCGNrEJvYHB0lZQfEVoYJZTLqfiaKJcQMd4+nM1UXRFQ3MQVSGKUbMnCDOFLHUq5bFQBM3JdS9D5YLwdQgFsL+4BbafmLeDpEcGJgmJcpD4hS6wZmIgxUQQoTxKHV/Q1EVaX5uGIrZkXxEs7/AFEajcUWp1lL+YGvSFW5bS+sSA1rAwnU++0t9GKzFaXRZV+5WF5cHdgErVk0c9x0ysLPMWzDLVJioKxlXAWYC9eFjXbPiAP0juGKZlPTbLc7qKdDdLVXJM2LYrXBMHhuMQBSi1GlZWwOA6RNkIpLsXLmtlNz4YA0/wAxlEu17jZHRW8wUOJg6y7zzDBYdXvKCmXuO2DARRugtxrEWLt5dZYGJy+Y0PjpMGaZ3jZqM3Nc8S4O+Yo2vQ5PmboVRBpXEqNGWkLQoRYBXIuL3dZgqz06SihHVoGupYCxBYoK2CK6xfaDiZ9S50wDYYxXmVYNuvcKBW6lkY2cICClGM+8SnFfU0I+AEUJu76x0Ut+CX5Uu5Y21HhuBLkBrWYwkDFe4TRc66QpVebiHLaKZOkQwvuC3MQBecS0g8xiLTmOx0l1jiOqqYVDJWMzBQYtC4LLF3mYCCQGKuDXg+YFRcEKJgIQn8G5bUFnErgytcZgK7mcGU9ZUsq+oyJZoR9P/9k=');
+    background-size: cover;
+    background-position: center center;
+  }
+}
