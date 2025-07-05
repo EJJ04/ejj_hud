@@ -252,10 +252,10 @@ RegisterNetEvent('ejj_hud:client:LoadMap', function()
     SetMinimapComponentPosition('minimap_blur', 'L', 'B', baseX - 0.01, 0.025, 0.262, 0.300) 
 
     SetBlipAlpha(GetNorthRadarBlip(), 0)
-    SetRadarBigmapEnabled(true, false)
+    SetBigmapActive(true, false)
     SetMinimapClipType(0)
     Wait(50)
-    SetRadarBigmapEnabled(false, false)
+    SetBigmapActive(false, false)
 
     if HasStreamedTextureDictLoaded('squaremap') then
         SetStreamedTextureDictAsNoLongerNeeded('squaremap')
